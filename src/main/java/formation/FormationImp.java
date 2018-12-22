@@ -1,5 +1,6 @@
 package formation;
 
+import creature.Location;
 import world.*;
 
 public interface FormationImp {

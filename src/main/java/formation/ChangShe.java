@@ -6,7 +6,7 @@ import creature.*;
 
 public class ChangShe implements FormationImp {
 
-    @Override
+
     public void arrange(BattleField battleField, Queue queue, Location location) {
         int row = battleField.getRow();
         int column = battleField.getColumn();

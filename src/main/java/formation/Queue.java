@@ -1,12 +1,14 @@
 package formation;
 
-import world.Location;
+import creature.Location;
 import creature.Creature;
+import java.util.ArrayList;
 
 public class Queue {
 
     private Location[] locations;
     private Creature[] creatures;
+    private ArrayList<Creature> list = new ArrayList<>(); //TODO
 
 
     public Queue(Creature[] cb){
@@ -18,6 +20,11 @@ public class Queue {
             this.creatures[i].setLocation(this.locations[i]);
         }
         this.creatures = cb;
+
+        for (Creature creature : creatures) {
+            list.add(creature);
+        }
+        this.setList(list);
     }
 
     public Location[] getLocations() {
@@ -26,5 +33,13 @@ public class Queue {
 
     public Creature[] getCreatures() {
         return creatures;
+    }
+
+    public ArrayList<? extends Creature> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Creature> list) {
+        this.list = list;
     }
 }

@@ -11,6 +11,13 @@ public class Refresh implements Runnable{
     }
 
     public void run() {
+        while (true) {
+
+        }
+
+    }
+
+    public void refreshUI(BattleField battleField) {
 
     }
 }

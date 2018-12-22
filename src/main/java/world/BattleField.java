@@ -2,8 +2,11 @@ package world;
 
 import creature.*;
 import formation.*;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+
+import java.util.ArrayList;
 
 public class BattleField {
 
@@ -12,6 +15,8 @@ public class BattleField {
     private int column;
     private BattleField battleField;
     public Location[][] arr;
+    private Canvas canvas ;
+    private ArrayList<Creature> allCreature;
 
 
     public BattleField(int row, int column){
@@ -24,9 +29,9 @@ public class BattleField {
         }
         this.row = row;
         this.column = column;
+        this.canvas = canvas;
 
     }
-
 
     /**
      * 增加棋盘上的生物种类
@@ -58,6 +63,7 @@ public class BattleField {
 
     /*清除battlefield*/
     public void clear(){
+
         for(int i=0; i<row; i++) {
             for (int j = 0; j < column; j++) {
                 arr[i][j] = new Location(i,j);
@@ -68,12 +74,11 @@ public class BattleField {
 
     /* 打印棋盘*/
     public void print(){
-        for(int i=0; i<row; i++){
-            for(int j=0; j<column; j++){
-                this.arr[i][j].setEmpty(true);
-                System.out.print(this.arr[i][j].getLocation_creature().toString() + "      ");
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < column; j++){
+                System.out.print(this.arr[i][j].getLocation_creature().toString() + "     ");
             }
-            System.out.println("\t");
+            System.out.println();
         }
         System.out.println("\t");
     }
@@ -91,4 +96,11 @@ public class BattleField {
     }
 
 
+    public ArrayList<Creature> getAllCreature() {
+        return allCreature;
+    }
+
+    public void setAllCreature(ArrayList<Creature> allCreature) {
+        this.allCreature = allCreature;
+    }
 }

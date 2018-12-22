@@ -1,24 +1,34 @@
-import javafx.application.Platform;
 import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
-import world.Controller;
+import javafx.stage.WindowEvent;
+import world.WelcomePageController;
 
 
-public class Main extends Application {
+public final class Main extends Application {
 
     public static void main(String[] args){
         launch(args);
     }
 
-    public void start(final Stage primaryStage) throws Exception {
-        Platform.runLater(new Runnable() {
+    public void start(Stage primaryStage) throws Exception {
 
-            public void run() {
-                try {
-                    new Controller(primaryStage).startGame();
-                } catch (Exception e){
-                    e.printStackTrace();
-                }
+        try {
+            new WelcomePageController().start(new Stage());
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        //监听窗口关闭事件，回收线程
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                System.out.print("窗口关闭");
+                System.exit(0);
             }
         });
     }

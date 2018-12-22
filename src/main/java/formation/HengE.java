@@ -1,10 +1,11 @@
 package formation;
 
+import creature.Location;
 import world.*;
 import creature.Creature;
 
 public class HengE implements FormationImp {
-    @Override
+
     public void arrange(BattleField battleField, Queue queue, Location location ) {
         int row = battleField.getRow();
         int column = battleField.getColumn();
@@ -25,11 +26,11 @@ public class HengE implements FormationImp {
             creatures[count].setLocation(location1);
             location1.setEmpty(false);
             if(count%2 == 0) {
-                location_x++;
-                location_y++;
+                location_x+=1;
+                location_y+=2;
             }else {
-                location_x++;
-                location_y--;
+                location_x+=1;
+                location_y-=2;
             }
         }
     }

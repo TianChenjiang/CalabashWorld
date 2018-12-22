@@ -1,10 +1,11 @@
 package formation;
 
+import creature.Location;
 import world.*;
 import creature.Creature;
 
 public class HeYi implements FormationImp {
-    @Override
+
     public void arrange(BattleField battleField, Queue queue, Location location) {
         int row = battleField.getRow();
         int column = battleField.getColumn();

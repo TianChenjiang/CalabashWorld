@@ -1,6 +1,6 @@
 package sort;
 
-import world.Location;
+import creature.Location;
 import creature.Creature;
 import formation.Queue;
 
