@@ -14,4 +14,9 @@ public class ScorpionEssence extends Creature {
         String url = "pic/" + "蝎子精" + ".png";
         return new Image(url);
     }
+
+    @Override
+    protected void fight() {
+
+    }
 }

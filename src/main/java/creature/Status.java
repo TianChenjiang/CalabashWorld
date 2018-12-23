@@ -1,5 +1,5 @@
 package creature;
 
 public enum  Status {
-    FIGHTING, DEAD
+    FIGHTING, DEAD, LiVING
 }

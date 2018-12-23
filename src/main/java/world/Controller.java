@@ -1,5 +1,6 @@
 package world;
 
+import creature.BadCreature.ScorpionEssence;
 import creature.BadCreature.SnakeSpirit;
 import creature.Creature;
 import creature.GoodCreature.CalabashBrothers;
@@ -30,6 +31,7 @@ import record.Record;
 import sort.*;
 
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -41,13 +43,15 @@ import java.util.logging.Handler;
 public class Controller implements Runnable {
 
     public static final int CANVAS_WIDTH = 1000;
-    public static final int CANVAS_HEIGHT = 500;
+    public static final int CANVAS_HEIGHT = 600;
 
     private BattleField battleField;
     private Controller controller;
     private ExecutorService goodCreatureExe = Executors.newCachedThreadPool(); //正义势力线程池
     private ExecutorService badCreatureExe = Executors.newCachedThreadPool(); //邪恶势力线程池
     private ExecutorService controllerExe = Executors.newSingleThreadExecutor(); //绘画师单线程
+    public static ArrayList<Creature> goodCreature = new ArrayList<>();
+    public static ArrayList<Creature> badCreature = new ArrayList<>();
     private Record record;
     private Timer timer;
     private Stage primaryStage;
@@ -77,8 +81,8 @@ public class Controller implements Runnable {
         try {
             System.out.println(getClass().getClassLoader().getResource("world/fxml/mainController.fxml"));
 //            root = FXMLLoader.load(getClass().getClassLoader().getResource("world/fxml/mainController.fxml"));
-            Scene scene = new Scene(root,1000,500);
-             scene.getStylesheets().add(getClass().getClassLoader().getResource("world/css/mainController.css").toExternalForm()); //设置背景
+            Scene scene = new Scene(root,1000,600);
+            scene.getStylesheets().add(getClass().getClassLoader().getResource("world/css/mainController.css").toExternalForm()); //设置背景
 
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -110,21 +114,27 @@ public class Controller implements Runnable {
 
     @Override
     public void run(){
+        this.startGame();
+        System.out.println("controller 线程开始");
+        play();
+    }
+
+    public void startGame(){
         record.beginRecord();
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+//                canvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
                 showUI();
                 record.beginRecord();
             }
         }, 0, 100);
         try {
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        this.play();
     }
 
     public void stopGame(){
@@ -135,21 +145,21 @@ public class Controller implements Runnable {
 
 
     public void showUI() {
-//        canvas = new Canvas(1000, 500);
+//        canvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, gc.getCanvas().getWidth(), gc.getCanvas().getHeight());
+//        canvas = new Canvas(1000, 500);
         synchronized (battleField) {
             battleField.loadImage(gc);
-        }
-        try{
-            TimeUnit.MILLISECONDS.sleep(50);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
     }
 
     public void clearUI(){
+
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-        graphicsContext.clearRect(5,5,CANVAS_WIDTH, CANVAS_HEIGHT);
+        showUI();
+        battleField.loadImage(graphicsContext);
+//        graphicsContext.clearRect(20,10,CANVAS_WIDTH, CANVAS_HEIGHT);
     }
 
 
@@ -191,30 +201,43 @@ public class Controller implements Runnable {
         try {
 
 
-            /**正义势力初始化*/
+            /**正义势力初始化并将正义势力存入ArrayList*/
             brotherQueue = new Queue(new CalabashBrothers().initialCB());
             Grandpa grandpa = new Grandpa();
 
             goodCreatureExe = Executors.newCachedThreadPool();
             for (Creature bro : brotherQueue.getList()) {
                 goodCreatureExe.execute(bro);
+                goodCreature.add(bro);
             }
             goodCreatureExe.execute(grandpa);
+            goodCreatureExe.shutdown();
             System.out.println("正义线程启动");
 //            goodCreatureExe.shutdown();
+            goodCreature.add(grandpa);
+            battleField.setGoodCreature(goodCreature);
 
-            /**邪恶阵营初始化*/
+            /**邪恶阵营初始化并将邪恶势力存入ArrayList*/
             lGuysQueue = new Queue(new LittleGuys().initialGuys());
             SnakeSpirit snakeSpirit = new SnakeSpirit();
+            ScorpionEssence scorpionEssence = new ScorpionEssence();
 
             for (Creature lGuys : lGuysQueue.getList()) {
                 badCreatureExe.execute(lGuys);
+                badCreature.add(lGuys);
             }
             badCreatureExe.execute(snakeSpirit);
+            badCreatureExe.execute(scorpionEssence);
+            badCreatureExe.shutdown();
+            badCreature.add(snakeSpirit);
+            badCreature.add(scorpionEssence);
+            battleField.setBadCreatrue(badCreature);
             System.out.println("邪恶线程启动");
 
 //            badCreatureExe.shutdown();
-
+            for (Creature c : badCreature) {
+                System.out.println(c.toString());
+            }
 
             /**阵型初始化*/
             FormationImp changShe = new ChangShe();
@@ -224,12 +247,27 @@ public class Controller implements Runnable {
 
 
             /**放置葫芦娃*/
-            heYi.arrange(battleField, brotherQueue, new Location(5, 5));
+            heYi.arrange(battleField, brotherQueue, new Location(10, 3));
             new RandomSort().sort(brotherQueue);
             battleField.print();
             this.showUI();
             primaryStage.show();
 
+
+            int random = new Random().nextInt(2);
+            switch (random) {
+                case 0:
+                    hengE.arrange(battleField, lGuysQueue, new Location(10, 15));
+                    showUI();
+                    break;
+                case 1:
+                    heYi.arrange(battleField, lGuysQueue, new Location(15, 12));
+                    showUI();
+                    break;
+                default:
+                    yanXing.arrange(battleField, lGuysQueue, new Location(10, 15));
+                    break;
+            }
 
             //随机选择小喽啰阵型
            /* int count = 0;
@@ -249,7 +287,7 @@ public class Controller implements Runnable {
                 }
 */
 
-            Timeline ThreeSecondsWonder = new Timeline(new KeyFrame(Duration.seconds(3), new EventHandler<ActionEvent>() {
+            /*Timeline ThreeSecondsWonder = new Timeline(new KeyFrame(Duration.seconds(3), new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
                     int random = new Random().nextInt(2);
@@ -259,29 +297,34 @@ public class Controller implements Runnable {
                             showUI();
                             break;
                         case 1:
-                            heYi.arrange(battleField, lGuysQueue, new Location(8, 8));
+                            heYi.arrange(battleField, lGuysQueue, new Location(15, 12));
                             showUI();
                             break;
                         default:
-                            yanXing.arrange(battleField, lGuysQueue, new Location(8, 8));
+                            yanXing.arrange(battleField, lGuysQueue, new Location(10, 15));
                             break;
                     }
                 }
             }));
 
             ThreeSecondsWonder.setCycleCount(2);
-            ThreeSecondsWonder.play();
+            ThreeSecondsWonder.play();*/
 
 
 //            添加老爷爷和蛇精
-            TimeUnit.SECONDS.sleep(3);
+//            TimeUnit.SECONDS.sleep(3);
             battleField.addCreature(grandpa, new Location(3, 3));
             battleField.addCreature(snakeSpirit, new Location(10, 12));
+            battleField.addCreature(scorpionEssence, new Location(15,19));
             battleField.print();
             showUI();
 
-            battleField.clear();
-            int random2 =  new Random().nextInt(2);
+            this.clearUI();
+            battleField.addCreature(grandpa, new Location(4, 4));
+            battleField.addCreature(snakeSpirit, new Location(10, 12));
+            battleField.addCreature(scorpionEssence, new Location(15,19));
+            showUI();
+            /*int random2 =  new Random().nextInt(2);
             switch (random2) {
                 case 0:
                     hengE.arrange(battleField, lGuysQueue, new Location(10, 15));
@@ -293,7 +336,7 @@ public class Controller implements Runnable {
                     yanXing.arrange(battleField, lGuysQueue, new Location(8, 8));
                     break;
                 default:
-            }
+            }*/
 
             battleField.print();
             isControllerKilled = true;
@@ -320,7 +363,7 @@ public class Controller implements Runnable {
         controllerExe.shutdown();
         System.out.println("控制器线程结束");
 
-        System.exit(1);
+//        System.exit(1);
     }
 
    /* class Player implements Runnable {

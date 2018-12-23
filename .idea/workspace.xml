@@ -2,24 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e821dc5f-f6b3-41d3-ab96-e4e2a5648c8d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/world/css/largeBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/world/css/back.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/world/css/newbackground.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/creature/BadCreature/ScorpionEssence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/BadCreature/ScorpionEssence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/creature/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/world/BattleField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/BattleField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/world/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/world/css/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/css/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/world/Fight.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/world/css/mainController.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/css/mainController.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/world/css/startpage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/world/css/newbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/css/newbackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/BadCreature/LittleGuys.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/creature/BadCreature/LittleGuys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/BadCreature/ScorpionEssence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/creature/BadCreature/ScorpionEssence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/BadCreature/SnakeSpirit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/creature/BadCreature/SnakeSpirit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/Creature$Direaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/Creature$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/creature/Creature$Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/Creature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/creature/Creature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/creature/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/creature/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/world/BattleField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/BattleField.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/world/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/world/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/Controller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/world/Controller$3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/world/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/WelcomePageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/WelcomePageController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/WelcomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/WelcomePageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/css/WelcomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/css/WelcomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/css/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/css/background.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/world/css/mainController.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/css/mainController.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/css/startpage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/world/css/newbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/world/css/newbackground.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,6 +46,115 @@
       </map>
     </option>
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/world/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="354" column="16" selection-start-line="354" selection-start-column="16" selection-end-line="354" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/javafx-src.zip!/javafx/scene/canvas/Canvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
+              <folding>
+                <element signature="e#3786#3787#0" expanded="true" />
+                <element signature="e#3842#3843#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomePageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/world/WelcomePageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+              <folding>
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1725#1726#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Creature.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/creature/Creature.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1123">
+              <caret line="111" column="15" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Refresh.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/world/Refresh.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalabashBrothers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/creature/GoodCreature/CalabashBrothers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BattleField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/world/BattleField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1394">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="e#2887#2888#0" expanded="true" />
+                <element signature="e#2933#2934#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnakeSpirit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LittleGuys.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grandpa.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/creature/GoodCreature/Grandpa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -50,6 +168,8 @@
       <find>draw</find>
       <find>clearUI</find>
       <find>run</find>
+      <find>sleep</find>
+      <find>showUI</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,9 +187,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/creature/GoodCreature/CalabashBrothers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java" />
-        <option value="$PROJECT_DIR$/src/main/java/creature/BadCreature/ScorpionEssence.java" />
-        <option value="$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java" />
         <option value="$PROJECT_DIR$/src/main/java/creature/GoodCreature/Grandpa.java" />
         <option value="$PROJECT_DIR$/src/main/java/creature/Space.java" />
         <option value="$PROJECT_DIR$/src/main/java/formation/HeYi.java" />
@@ -81,8 +198,6 @@
         <option value="$PROJECT_DIR$/src/main/java/formation/Queue.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/formation/HengE.java" />
-        <option value="$PROJECT_DIR$/src/main/java/world/BattleField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/creature/Creature.java" />
         <option value="$PROJECT_DIR$/src/main/resources/BattleField.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/startpage.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/world/WelcomePage.java" />
@@ -96,11 +211,17 @@
         <option value="$PROJECT_DIR$/src/main/java/world/Fight.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/AuthorAnno.java" />
-        <option value="$PROJECT_DIR$/src/main/java/world/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/world/css/mainController.css" />
         <option value="$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.css" />
-        <option value="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/world/fxml/mainController.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/world/css/mainController.css" />
+        <option value="$PROJECT_DIR$/src/main/java/creature/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java" />
+        <option value="$PROJECT_DIR$/src/main/java/creature/BadCreature/ScorpionEssence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/world/BattleField.java" />
+        <option value="$PROJECT_DIR$/src/main/java/creature/Creature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/world/Controller.java" />
       </list>
     </option>
   </component>
@@ -114,7 +235,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="146" />
+    <option name="x" value="71" />
     <option name="width" value="1534" />
     <option name="height" value="951" />
   </component>
@@ -124,6 +245,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,7 +284,49 @@
               <item name="CalabashWorld_homework" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="creature" type="462c0819:PsiDirectoryNode" />
+              <item name="BadCreature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalabashWorld_homework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="creature" type="462c0819:PsiDirectoryNode" />
+              <item name="GoodCreature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalabashWorld_homework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="formation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalabashWorld_homework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalabashWorld_homework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CalabashWorld_homework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
@@ -181,7 +345,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,6 +365,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="world" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/world/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/world/css" />
@@ -333,6 +499,9 @@
       <workItem from="1545455622586" duration="12432000" />
       <workItem from="1545487968420" duration="9243000" />
       <workItem from="1545545803591" duration="3419000" />
+      <workItem from="1545554605803" duration="61000" />
+      <workItem from="1545556390231" duration="6750000" />
+      <workItem from="1545568479907" duration="921000" />
     </task>
     <servers />
   </component>
@@ -342,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41027000" />
+    <option name="totallyTimeSpent" value="48759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -354,34 +523,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="146" y="0" width="1534" height="951" extended-state="0" />
+    <frame x="71" y="0" width="1534" height="951" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Statistic" order="7" sideWeight="0.49798927" weight="0.21545668" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.3290398" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.3290398" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.25761124" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067025" side_tool="true" weight="0.3793911" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.3290398" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798927" weight="0.0" />
+      <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.3290398" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.441452" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2600536" />
+      <window_info anchor="bottom" id="Statistic" order="7" sideWeight="0.49798927" weight="0.0" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.441452" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067025" side_tool="true" weight="0.3793911" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290398" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.25761124" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="0" />
@@ -424,36 +594,77 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/world/BattleField.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#2491#2492#0" expanded="true" />
-            <element signature="e#2525#2526#0" expanded="true" />
-            <element signature="e#2592#2593#0" expanded="true" />
-            <element signature="e#2638#2639#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2580">
+          <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="39" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/background.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/world/WelcomePageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+        <state relative-caret-position="525">
+          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+          <folding>
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/Refresh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/GoodCreature/CalabashBrothers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/BattleField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#2887#2888#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/GoodCreature/Grandpa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -461,6 +672,147 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/fightBackground.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/largeBackground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/background.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/background2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/newbackground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/newbackground.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/back4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/css/mainController.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/ScorpionEssence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/SnakeSpirit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/BadCreature/LittleGuys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/GoodCreature/Grandpa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/GoodCreature/CalabashBrothers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/Fight.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/WelcomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+          <folding>
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/Refresh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/creature/Creature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1123">
+          <caret line="111" column="15" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/BattleField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#2887#2888#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/javafx-src.zip!/javafx/scene/canvas/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
+          <folding>
+            <element signature="e#3786#3787#0" expanded="true" />
+            <element signature="e#3842#3843#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="354" column="16" selection-start-line="354" selection-start-column="16" selection-end-line="354" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -14,4 +14,8 @@ public class SnakeSpirit extends Creature {
         String url = "pic/" + "蛇精" + ".png";
         return new Image(url);
     }
+    @Override
+    protected void fight() {
+
+    }
 }

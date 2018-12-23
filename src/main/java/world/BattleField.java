@@ -17,6 +17,8 @@ public class BattleField {
     public Location[][] arr;
     private Canvas canvas ;
     private ArrayList<Creature> allCreature;
+    private ArrayList<Creature> goodCreature;
+    private ArrayList<Creature> badCreature;
 
 
     public BattleField(int row, int column){
@@ -96,11 +98,19 @@ public class BattleField {
     }
 
 
-    public ArrayList<Creature> getAllCreature() {
-        return allCreature;
+    public ArrayList<Creature> getGoodCreature() {
+        return goodCreature;
     }
 
-    public void setAllCreature(ArrayList<Creature> allCreature) {
-        this.allCreature = allCreature;
+    public void setGoodCreature(ArrayList<Creature> goodCreature) {
+        this.goodCreature = goodCreature;
+    }
+
+    public ArrayList<Creature> getBadCreatrue() {
+        return badCreature;
+    }
+
+    public void setBadCreatrue(ArrayList<Creature> badCreatrue) {
+        this.badCreature = badCreatrue;
     }
 }

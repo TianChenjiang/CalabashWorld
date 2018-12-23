@@ -24,4 +24,9 @@ public class LittleGuys extends Creature {
         String url = "pic/" + "小喽啰" + ".png";
         return new Image(url);
     }
+
+    @Override
+    protected void fight() {
+
+    }
 }
