@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e821dc5f-f6b3-41d3-ab96-e4e2a5648c8d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AuthorAnno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/world/Fight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/world/css/startpage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/world/fxml/mainController.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/Creature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/creature/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/Space.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/formation/ChangShe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/formation/ChangShe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/formation/FormationImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/formation/FormationImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/formation/HeYi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/formation/HeYi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/formation/HengE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/formation/HengE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/formation/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/formation/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/formation/YanXing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/formation/YanXing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/record/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/record/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sort/RandomSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/RandomSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/BattleField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/BattleField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/world/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creature/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Refresh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/Refresh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/BattleField.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/css/mainController.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pic/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/world/css/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,7 +36,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
+            <state relative-caret-position="84">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,21 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomePage.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WelcomePage.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+            <state relative-caret-position="90">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="27" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="WelcomePageController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WelcomePageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/world/WelcomePageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="960">
+              <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
               <folding>
                 <element signature="e#1666#1667#0" expanded="true" />
                 <element signature="e#1714#1715#0" expanded="true" />
@@ -108,8 +82,8 @@
       <file leaf-file-name="mainController.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/world/fxml/mainController.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="108">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -118,8 +92,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/world/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-485">
-              <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+            <state relative-caret-position="-510">
+              <caret line="38" selection-start-line="38" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -207,15 +181,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/world/fxml/BattleField.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/world/css/WelcomePage.css" />
         <option value="$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/world/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/world/Coordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/creature/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/world/Fight.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/world/fxml/mainController.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/world/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/AuthorAnno.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/world/fxml/mainController.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/world/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/world/WelcomePageController.java" />
       </list>
     </option>
   </component>
@@ -278,7 +252,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="formation" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CalabashWorld" type="b2602c69:ProjectViewProjectNode" />
@@ -470,7 +444,7 @@
       <updated>1545391440420</updated>
       <workItem from="1545391443196" duration="15933000" />
       <workItem from="1545455622586" duration="12432000" />
-      <workItem from="1545487968420" duration="7284000" />
+      <workItem from="1545487968420" duration="9034000" />
     </task>
     <servers />
   </component>
@@ -480,33 +454,42 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35649000" />
+    <option name="totallyTimeSpent" value="37399000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="0" width="1534" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.25846153" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.3290398" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.25761124" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067025" side_tool="true" weight="0.3793911" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290398" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2997658" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.3290398" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49798927" visible="true" weight="0.23302108" />
       <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.3290398" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
-      <window_info anchor="bottom" id="Statistic" order="7" weight="0.021077283" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
+      <window_info anchor="bottom" id="Statistic" order="7" sideWeight="0.49798927" weight="0.21545668" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4420513" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.441452" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -550,7 +533,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="42" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -854,24 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/world/WelcomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/world/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-485">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AuthorAnno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -879,9 +844,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
+        <state relative-caret-position="84">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -893,19 +866,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/world/fxml/mainController.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="108">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/world/fxml/WelcomePage.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+        <state relative-caret-position="-510">
+          <caret line="38" selection-start-line="38" selection-end-line="39" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/world/WelcomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+          <folding>
+            <element signature="e#1666#1667#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

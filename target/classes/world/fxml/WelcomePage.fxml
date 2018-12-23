@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:green;&#10;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="world.WelcomePageController">
+    <children>
+        <Label id="l1" layoutX="179.0" layoutY="61.0" prefHeight="182.0" prefWidth="300.0" text="CalabashWorld" textFill="WHITE">
+         <font>
+            <Font size="38.0" />
+         </font></Label>
+        <Label id="l2" layoutX="247.0" layoutY="295.0" text="Mars" textFill="WHITE">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <Label id="l3" layoutX="153.0" layoutY="355.0" text="点击任意位置开始葫芦大战" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+      <Label id="l1" layoutX="271.0" layoutY="286.0" text="Created by" textFill="WHITE" />
+    </children>
+</AnchorPane>

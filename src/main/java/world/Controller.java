@@ -20,16 +20,20 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.event.*;
 import record.Record;
 import sort.*;
 
-import java.awt.event.KeyEvent;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Handler;
 
 public class Controller implements Runnable {
 
@@ -48,7 +52,7 @@ public class Controller implements Runnable {
     private Queue lGuysQueue;
 
     @FXML
-    private AnchorPane root ;
+    private AnchorPane root = new AnchorPane() ;
 
     @FXML
     private Button button;
@@ -67,9 +71,9 @@ public class Controller implements Runnable {
 
         try {
             System.out.println(getClass().getClassLoader().getResource("world/fxml/mainController.fxml"));
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("world/fxml/mainController.fxml"));
+//            root = FXMLLoader.load(getClass().getClassLoader().getResource("world/fxml/mainController.fxml"));
             Scene scene = new Scene(root,1000,500);
-            scene.getStylesheets().add(getClass().getClassLoader().getResource("world/css/mainController.css").toExternalForm()); //设置背景
+             scene.getStylesheets().add(getClass().getClassLoader().getResource("world/css/mainController.css").toExternalForm()); //设置背景
 
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -77,6 +81,19 @@ public class Controller implements Runnable {
             /*this.initStyle(StageStyle.TRANSPARENT);
             this.setScene(scene);*/
             this.initUI(primaryStage);
+
+            scene.setOnKeyPressed(new EventHandler<KeyEvent>(){
+                @Override
+                public void handle(KeyEvent event) {
+                    if (event.getCode() == KeyCode.SPACE) {
+//                        controllerExe.execute(controller);
+                        run();
+                    } else {
+                        System.out.println("Error");
+                    }
+
+                }
+            });
 
         } catch (Exception e){
             e.printStackTrace();
@@ -132,7 +149,7 @@ public class Controller implements Runnable {
 
 
 
-//响应空格的按下 开始游戏
+/*//响应空格的按下 开始游戏
     class KeyAdapter extends java.awt.event.KeyAdapter {
         @Override
         public void keyPressed(KeyEvent e) {
@@ -153,13 +170,13 @@ public class Controller implements Runnable {
             }
         }
 
-    }
+    }*/
 
 
 
     public void play() {
 
-        controllerExe.execute(this);
+
         /*打印初始阵型*/
         System.out.println("初始化");
         battleField.print();
@@ -334,8 +351,8 @@ public class Controller implements Runnable {
     public void initUI(Stage primaryStage){
 //        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("battleField.fxml"));
         root.getChildren().add(canvas);
-        Scene scene = new Scene(root,1000,500);
-        scene.getStylesheets().add(getClass().getClassLoader().getResource("world/css/mainController.css").toExternalForm()); //设置背景
+//        Scene scene = new Scene(root,1000,500);
+        /*scene.getStylesheets().add(getClass().getClassLoader().getResource("world/css/mainController.css").toExternalForm()); //设置背景
         scene.setOnKeyPressed(new EventHandler<javafx.scene.input.KeyEvent>() {
             @Override
             public void handle(javafx.scene.input.KeyEvent event) {
@@ -346,7 +363,7 @@ public class Controller implements Runnable {
                     play();
                 }
             }
-        });
+        });*/
 
     }
 }
