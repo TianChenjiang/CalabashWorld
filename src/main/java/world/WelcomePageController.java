@@ -30,7 +30,7 @@ public class WelcomePageController extends Application {
 //        System.out.println(getClass().getResource("fxml/WelcomePage.fxml"));
         rootPan = fxmlLoader.load();
 
-        Scene scene = new Scene(rootPan, 1000, 500);
+        Scene scene = new Scene(rootPan, 800, 500);
 //        System.out.println(getClass().getResource("css/WelcomePage.css"));
         scene.getStylesheets().add(getClass().getResource("css/WelcomePage.css").toExternalForm());
         scene.setFill(Color.TRANSPARENT);
@@ -49,7 +49,7 @@ public class WelcomePageController extends Application {
             @Override
             public void run()
             {
-                new Controller(new Stage());
+                new Controller(primaryStage);
             }
         });
     });

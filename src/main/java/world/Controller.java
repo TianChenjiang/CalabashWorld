@@ -7,6 +7,8 @@ import creature.GoodCreature.Grandpa;
 import creature.BadCreature.LittleGuys;
 import creature.Location;
 import formation.*;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,6 +25,7 @@ import javafx.stage.Stage;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.event.*;
+import javafx.util.Duration;
 import record.Record;
 import sort.*;
 
@@ -47,6 +50,7 @@ public class Controller implements Runnable {
     private ExecutorService controllerExe = Executors.newSingleThreadExecutor(); //绘画师单线程
     private Record record;
     private Timer timer;
+    private Stage primaryStage;
 
     private Queue brotherQueue;
     private Queue lGuysQueue;
@@ -68,6 +72,7 @@ public class Controller implements Runnable {
         battleField = new BattleField(20,20);
         canvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
         record = new Record();
+        this.primaryStage = primaryStage;
 
         try {
             System.out.println(getClass().getClassLoader().getResource("world/fxml/mainController.fxml"));
@@ -88,8 +93,9 @@ public class Controller implements Runnable {
                     if (event.getCode() == KeyCode.SPACE) {
 //                        controllerExe.execute(controller);
                         run();
-                    } else {
-                        System.out.println("Error");
+                    } else if (event.getCode() == KeyCode.E) {
+                        System.out.println("Exit");
+                        stopGame();
                     }
 
                 }
@@ -194,6 +200,7 @@ public class Controller implements Runnable {
                 goodCreatureExe.execute(bro);
             }
             goodCreatureExe.execute(grandpa);
+            System.out.println("正义线程启动");
 //            goodCreatureExe.shutdown();
 
             /**邪恶阵营初始化*/
@@ -204,6 +211,8 @@ public class Controller implements Runnable {
                 badCreatureExe.execute(lGuys);
             }
             badCreatureExe.execute(snakeSpirit);
+            System.out.println("邪恶线程启动");
+
 //            badCreatureExe.shutdown();
 
 
@@ -219,9 +228,11 @@ public class Controller implements Runnable {
             new RandomSort().sort(brotherQueue);
             battleField.print();
             this.showUI();
+            primaryStage.show();
 
 
-            int count = 0;
+            //随机选择小喽啰阵型
+           /* int count = 0;
             while (count < 5) {
                 int random = new Random().nextInt(2);
                 switch (random) {
@@ -236,13 +247,31 @@ public class Controller implements Runnable {
                         break;
                     default:
                 }
+*/
 
-                battleField.print();
-                showUI();
-                clearUI();
-                count++;
-            }
-           battleField.clear();
+            Timeline ThreeSecondsWonder = new Timeline(new KeyFrame(Duration.seconds(3), new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    int random = new Random().nextInt(2);
+                    switch (random) {
+                        case 0:
+                            hengE.arrange(battleField, lGuysQueue, new Location(10, 15));
+                            showUI();
+                            break;
+                        case 1:
+                            heYi.arrange(battleField, lGuysQueue, new Location(8, 8));
+                            showUI();
+                            break;
+                        default:
+                            yanXing.arrange(battleField, lGuysQueue, new Location(8, 8));
+                            break;
+                    }
+                }
+            }));
+
+            ThreeSecondsWonder.setCycleCount(2);
+            ThreeSecondsWonder.play();
+
 
 //            添加老爷爷和蛇精
             TimeUnit.SECONDS.sleep(3);
@@ -270,21 +299,28 @@ public class Controller implements Runnable {
             isControllerKilled = true;
 
             showUI();
+            primaryStage.show();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        stopGame();
 
     }
 
     //
     public void ruinWorld() {
         battleField.clear();
+        showUI();
+
         goodCreatureExe.shutdown();
+        System.out.println("正义生物线程结束");
         badCreatureExe.shutdown();
+        System.out.println("邪恶生物线程结束");
         controllerExe.shutdown();
+        System.out.println("控制器线程结束");
+
+        System.exit(1);
     }
 
    /* class Player implements Runnable {
@@ -339,7 +375,7 @@ public class Controller implements Runnable {
         {
             try
             {
-               ruinWorld();
+//                ruinWorld();
             } catch (Exception e)
             {
                 e.printStackTrace();
