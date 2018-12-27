@@ -91,14 +91,20 @@ public class Controller implements Runnable {
             this.setScene(scene);*/
             this.initUI(primaryStage);
 
+            controllerExe.execute(this);
+            System.out.println("controller 线程开始");
+
             scene.setOnKeyPressed(new EventHandler<KeyEvent>(){
                 @Override
                 public void handle(KeyEvent event) {
                     if (event.getCode() == KeyCode.SPACE) {
 //                        controllerExe.execute(controller);
-                        run();
+                        play();
                     } else if (event.getCode() == KeyCode.E) {
                         System.out.println("Exit");
+                       /* for (Creature c : goodCreature) {
+                            System.out.println(c.toString());
+                        }*/
                         stopGame();
                     }
 
@@ -116,7 +122,17 @@ public class Controller implements Runnable {
     public void run(){
         this.startGame();
         System.out.println("controller 线程开始");
-        play();
+        while (!isControllerKilled) {
+            synchronized (battleField) {
+                showUI();
+                System.out.println("controller 在run");
+            }
+            try {
+                TimeUnit.MILLISECONDS.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void startGame(){
@@ -140,19 +156,18 @@ public class Controller implements Runnable {
     public void stopGame(){
         record.stopRecord();
         timer.cancel();
+        isControllerKilled = true;
         ruinWorld();
     }
 
 
     public void showUI() {
-//        canvas = new Canvas(CANVAS_WIDTH, CANVAS_HEIGHT);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, gc.getCanvas().getWidth(), gc.getCanvas().getHeight());
 //        canvas = new Canvas(1000, 500);
-        synchronized (battleField) {
-            battleField.loadImage(gc);
-        }
+        battleField.loadImage(gc);
     }
+/*
 
     public void clearUI(){
 
@@ -161,6 +176,7 @@ public class Controller implements Runnable {
         battleField.loadImage(graphicsContext);
 //        graphicsContext.clearRect(20,10,CANVAS_WIDTH, CANVAS_HEIGHT);
     }
+*/
 
 
 
@@ -196,10 +212,9 @@ public class Controller implements Runnable {
         /*打印初始阵型*/
         System.out.println("初始化");
         battleField.print();
-        this.showUI();
+
 
         try {
-
 
             /**正义势力初始化并将正义势力存入ArrayList*/
             brotherQueue = new Queue(new CalabashBrothers().initialCB());
@@ -211,7 +226,7 @@ public class Controller implements Runnable {
                 goodCreature.add(bro);
             }
             goodCreatureExe.execute(grandpa);
-            goodCreatureExe.shutdown();
+//            goodCreatureExe.shutdown();
             System.out.println("正义线程启动");
 //            goodCreatureExe.shutdown();
             goodCreature.add(grandpa);
@@ -228,7 +243,7 @@ public class Controller implements Runnable {
             }
             badCreatureExe.execute(snakeSpirit);
             badCreatureExe.execute(scorpionEssence);
-            badCreatureExe.shutdown();
+//            badCreatureExe.shutdown();
             badCreature.add(snakeSpirit);
             badCreature.add(scorpionEssence);
             battleField.setBadCreatrue(badCreature);
@@ -250,7 +265,6 @@ public class Controller implements Runnable {
             heYi.arrange(battleField, brotherQueue, new Location(10, 3));
             new RandomSort().sort(brotherQueue);
             battleField.print();
-            this.showUI();
             primaryStage.show();
 
 
@@ -317,13 +331,10 @@ public class Controller implements Runnable {
             battleField.addCreature(snakeSpirit, new Location(10, 12));
             battleField.addCreature(scorpionEssence, new Location(15,19));
             battleField.print();
-            showUI();
 
-            this.clearUI();
             battleField.addCreature(grandpa, new Location(4, 4));
             battleField.addCreature(snakeSpirit, new Location(10, 12));
             battleField.addCreature(scorpionEssence, new Location(15,19));
-            showUI();
             /*int random2 =  new Random().nextInt(2);
             switch (random2) {
                 case 0:
@@ -354,6 +365,7 @@ public class Controller implements Runnable {
     //
     public void ruinWorld() {
         battleField.clear();
+        battleField.addCreature(new Grandpa(), new Location(10,10));
         showUI();
 
         goodCreatureExe.shutdown();

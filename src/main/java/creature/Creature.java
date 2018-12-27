@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
-public class Creature implements Comparable, Runnable {
+public abstract class Creature implements Comparable, Runnable {
 
     protected String name;
     private Creature creature;
@@ -15,8 +15,7 @@ public class Creature implements Comparable, Runnable {
     private Random random;
     private Status status = Status.LIVE;
 
-
-    protected BattleField battleField;
+    private BattleField battleField;
 
     /**基本方法*/
     public String toString(){return name;}
@@ -51,6 +50,15 @@ public class Creature implements Comparable, Runnable {
         this.status = status;
     }
 
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public void setBattleField(BattleField battleField) {
+        this.battleField = battleField;
+    }
+
+
     /*获得两个生物的距离*/
     public int distanceTo (Creature anotherCreature) {
         Location another = anotherCreature.getLocation();
@@ -63,17 +71,18 @@ public class Creature implements Comparable, Runnable {
         System.out.println(this.toString() + "线程启动");
         try{
             while(true){
-                synchronized (battleField) {
-                    switch (status){
+                System.out.println(battleField);
+//                synchronized (creature) {
+                    switch (this.status){
                         case LIVE:  move(); break;
                         case FIGHTING: fight(); break;
                         case DEAD: dead(); break;
                         default: ;
                     }
-                }
+//                }
                 TimeUnit.MILLISECONDS.sleep(100);
             }
-        }catch (Exception e){
+        } catch (InterruptedException e){
             System.out.println(this.toString() + "线程切断:"+this.status);
         }
     }
@@ -81,8 +90,11 @@ public class Creature implements Comparable, Runnable {
 
     /**作战方法*/
     protected void move(){
+        System.out.println("移动");
         switch (new Random().nextInt(5)){
             case 0:
+                //静止
+                break;
             case 1:
                 this.moveAStep(Direction.LEFT);
                 break;
@@ -99,23 +111,34 @@ public class Creature implements Comparable, Runnable {
         }
     }
 
-    private final int step = 5;
+    private final int step = 1;
     protected final void moveAStep(Direction d){
-        int nx = 0, ny = 0;
+        int offset_x = 0, offset_y = 0;
+        int x = this.getLocation().getX();
+        int y = this.getLocation().getY();
         switch (d) {
             case LEFT:
-                nx -= step;
+                offset_x -= step;
                 break;
             case RIGHT:
-                nx += step;
+                offset_x += step;
                 break;
             case UP:
-                ny -= step;
+                offset_y -= step;
                 break;
             case DOWN:
-                ny += step;
+                offset_y += step;
                 break;
             default: ;
+            this.getLocation().setEmpty(true);
+            Creature temp = this;
+            //设为空地
+            this.location.setLocation_creature(new Space());
+
+            Location newLocation = new Location(x + offset_x,y + offset_y);
+            this.setLocation(newLocation);
+            newLocation.setEmpty(false);
+            battleField.addCreature(temp, newLocation);
         }
        /* CheckStatus checkStatus = checkForward(nx,ny);
         if(checkStatus==CheckStatus.NORMAL)
@@ -146,9 +169,7 @@ public class Creature implements Comparable, Runnable {
                 && this.y()+10>ct.y() && ct.y()+10>this.y();
     }*/
 
-    public void setImage(Image image) {
-        this.image = image;
-    }
+
 
     protected enum CheckStatus{
         NORMAL, FRIEND, ENEMY
@@ -161,13 +182,6 @@ public class Creature implements Comparable, Runnable {
     }
 
 
-
-    public void move(Location location){
-        int num = random.nextInt(4);
-        switch (num) {
-//            case 0 : this.move(new Location());
-        }
-    }
 
 
     /*synchronized来起到同步加锁*/

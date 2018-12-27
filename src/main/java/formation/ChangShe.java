@@ -19,6 +19,7 @@ public class ChangShe implements FormationImp {
             Location location1 = new Location(i, location.getY());
             creatures[count].setLocation(location1);
 
+
             battleField.addCreature(creatures[count],new Location(i,location.getY()));
             location1.setEmpty(false);
         }

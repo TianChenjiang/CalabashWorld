@@ -13,7 +13,6 @@ public class BattleField {
 
     private int row;
     private int column;
-    private BattleField battleField;
     public Location[][] arr;
     private Canvas canvas ;
     private ArrayList<Creature> allCreature;
@@ -45,12 +44,16 @@ public class BattleField {
         int y = location.getY();
         this.arr[x][y].setLocation_creature(creature);
         this.arr[x][y].setEmpty(false);
+        creature.setBattleField(this);
 
     }
 
     /** 增加棋盘上的队伍 */
     public void addQueue(Queue queue, Location startLocation, FormationImp formation){
-        formation.arrange(this.battleField, queue, startLocation);
+        formation.arrange(this, queue, startLocation);
+        for (Creature creature :queue.getList()) {
+            creature.setBattleField(this);
+        }
     }
 
 
