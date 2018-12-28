@@ -66,12 +66,12 @@ public abstract class Creature implements Comparable, Runnable {
     }
 
 
-    /* 设计模式：模板方法（Template Method） */
+    /* 模版方法 */
     public final void run(){
         System.out.println(this.toString() + "线程启动");
         try{
             while(true){
-                System.out.println(battleField);
+//                System.out.println(battleField);
 //                synchronized (creature) {
                     switch (this.status){
                         case LIVE:  move(); break;
@@ -90,7 +90,7 @@ public abstract class Creature implements Comparable, Runnable {
 
     /**作战方法*/
     protected void move(){
-        System.out.println("移动");
+//        System.out.println(this + "移动");
         switch (new Random().nextInt(5)){
             case 0:
                 //静止
@@ -114,8 +114,8 @@ public abstract class Creature implements Comparable, Runnable {
     private final int step = 1;
     protected final void moveAStep(Direction d){
         int offset_x = 0, offset_y = 0;
-        int x = this.getLocation().getX();
-        int y = this.getLocation().getY();
+        int x = this.location.getX();
+        int y = this.location.getY();
         switch (d) {
             case LEFT:
                 offset_x -= step;
@@ -129,21 +129,24 @@ public abstract class Creature implements Comparable, Runnable {
             case DOWN:
                 offset_y += step;
                 break;
-            default: ;
-            this.getLocation().setEmpty(true);
-            Creature temp = this;
-            //设为空地
-            this.location.setLocation_creature(new Space());
+            default:
 
-            Location newLocation = new Location(x + offset_x,y + offset_y);
-            this.setLocation(newLocation);
-            newLocation.setEmpty(false);
-            battleField.addCreature(temp, newLocation);
         }
+        this.getLocation().setEmpty(true);
+        Creature temp = this;
+        //设为空地
+        this.location.setLocation_creature(new Space());
+        battleField.addCreature(new Space(), this.location);
+
+        Location newLocation = new Location(x + offset_x,y + offset_y);
+        this.setLocation(newLocation);
+        newLocation.setEmpty(false);
+        battleField.addCreature(temp, newLocation);
+    }
        /* CheckStatus checkStatus = checkForward(nx,ny);
         if(checkStatus==CheckStatus.NORMAL)
             this.setLocation(new Location(this.location.getX() + nx, this.location.getY() + ny));*/
-    }
+
 
     /* 对当前前进方向进行检测是否会与其他Creature相撞，offsetX,offsetY均为偏移量 */
     /*public synchronized CheckStatus checkForward(int offsetX, int offsetY){
@@ -211,9 +214,8 @@ public abstract class Creature implements Comparable, Runnable {
 */
 
 
-
-
-
-
-
 }
+
+
+
+

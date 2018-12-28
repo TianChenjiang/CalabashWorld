@@ -166,6 +166,11 @@ public class Controller implements Runnable {
         gc.clearRect(0, 0, gc.getCanvas().getWidth(), gc.getCanvas().getHeight());
 //        canvas = new Canvas(1000, 500);
         battleField.loadImage(gc);
+        try {
+            TimeUnit.SECONDS.sleep(1); //隔1s刷新一次
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 /*
 
