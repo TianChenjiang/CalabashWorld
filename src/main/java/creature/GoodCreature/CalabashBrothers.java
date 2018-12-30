@@ -16,6 +16,7 @@ public class CalabashBrothers extends Creature implements Comparable {
     private NAME NAME;
     private COLOR COLOR;
     private SENIORITY SENIORITY;
+    private boolean isGoodCreature = true;
 
 
     public CalabashBrothers(NAME name, SENIORITY seniority, COLOR color){
@@ -98,6 +99,7 @@ public class CalabashBrothers extends Creature implements Comparable {
 
     @Override
     public Image getImage() {
+        super.getImage();
         String url =   "pic/" + NAME + ".png";
 //        System.out.println(url);
         return new Image(url);
@@ -105,14 +107,7 @@ public class CalabashBrothers extends Creature implements Comparable {
 }
 
 
-enum COLOR {
-    赤, 橙, 黄, 绿, 青, 蓝, 紫
-}
 
-enum SENIORITY {
-    一, 二, 三, 四, 五, 六, 七
-}
 
-enum NAME {
-    大娃, 二娃, 三娃, 四娃, 五娃, 六娃, 七娃
-}
+
+

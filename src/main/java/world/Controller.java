@@ -337,7 +337,6 @@ public class Controller implements Runnable {
             battleField.addCreature(scorpionEssence, new Location(15,19));
             battleField.print();
 
-            battleField.addCreature(grandpa, new Location(4, 4));
             battleField.addCreature(snakeSpirit, new Location(10, 12));
             battleField.addCreature(scorpionEssence, new Location(15,19));
             /*int random2 =  new Random().nextInt(2);
@@ -370,7 +369,6 @@ public class Controller implements Runnable {
     //
     public void ruinWorld() {
         battleField.clear();
-        battleField.addCreature(new Grandpa(), new Location(10,10));
         showUI();
 
         goodCreatureExe.shutdown();

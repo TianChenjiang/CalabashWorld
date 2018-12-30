@@ -4,6 +4,7 @@ import creature.Creature;
 import javafx.scene.image.Image;
 
 public class LittleGuys extends Creature {
+    private boolean isGoodCreature = false;
 
     public LittleGuys[] initialGuys() {
         LittleGuys[] LGuys = new LittleGuys[7];
@@ -21,6 +22,7 @@ public class LittleGuys extends Creature {
 
     @Override
     public Image getImage() {
+        super.getImage();
         String url = "pic/" + "小喽啰" + ".png";
         return new Image(url);
     }

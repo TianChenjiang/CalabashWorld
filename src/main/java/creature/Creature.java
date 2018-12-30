@@ -1,8 +1,10 @@
 package creature;
+import formation.ConflictException;
 import javafx.scene.image.Image;
 import world.BattleField;
 
 import java.util.Random;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 
@@ -14,6 +16,7 @@ public abstract class Creature implements Comparable, Runnable {
     private Image image;
     private Random random;
     private Status status = Status.LIVE;
+    private boolean isGoodCreature = false;
 
     private BattleField battleField;
 
@@ -38,6 +41,7 @@ public abstract class Creature implements Comparable, Runnable {
     }
 
     public Image getImage() {
+        if(this.status == Status.DEAD) return new Image("pic/" + "die.png");
         return image;
     }
 
@@ -89,7 +93,7 @@ public abstract class Creature implements Comparable, Runnable {
 
 
     /**作战方法*/
-    protected void move(){
+    protected void move()  {
 //        System.out.println(this + "移动");
         switch (new Random().nextInt(5)){
             case 0:
@@ -112,7 +116,7 @@ public abstract class Creature implements Comparable, Runnable {
     }
 
     private final int step = 1;
-    protected final void moveAStep(Direction d){
+    protected final void moveAStep(Direction d)  {
         int offset_x = 0, offset_y = 0;
         int x = this.location.getX();
         int y = this.location.getY();
@@ -135,61 +139,57 @@ public abstract class Creature implements Comparable, Runnable {
         this.getLocation().setEmpty(true);
         Creature temp = this;
         //设为空地
+
+        this.battleField.addCreature(new Space(), this.location);
         this.location.setLocation_creature(new Space());
-        battleField.addCreature(new Space(), this.location);
 
         Location newLocation = new Location(x + offset_x,y + offset_y);
+//        if(x + offset_x > battleField.getRow() || y + offset_y > battleField.getColumn()){
+//            return;
+//        }
         this.setLocation(newLocation);
         newLocation.setEmpty(false);
         battleField.addCreature(temp, newLocation);
     }
-       /* CheckStatus checkStatus = checkForward(nx,ny);
-        if(checkStatus==CheckStatus.NORMAL)
-            this.setLocation(new Location(this.location.getX() + nx, this.location.getY() + ny));*/
 
 
-    /* 对当前前进方向进行检测是否会与其他Creature相撞，offsetX,offsetY均为偏移量 */
-    /*public synchronized CheckStatus checkForward(int offsetX, int offsetY){
-        boolean flag = this instanceof GoodCharacter;
-        for(Creature ct:room.getCreatures())
-            if(ct!=this && ct.getStatus()==Status.RUNNING && this.isCollidesWith(ct, offsetX, offsetY)) {
-                if(flag == (ct instanceof GoodCharacter)) {
-                    this.position.setPosition(this.x()-offsetX, this.y()-offsetY);
-                    return CheckStatus.FRIEND;
-                } else {
-                    boolean alive = new Random().nextBoolean();
-                    ct.setFight(alive);
-                    this.setFight(!alive);
-                    return CheckStatus.ENEMY;
+
+    private void setFight(boolean alive) {
+        if(alive) {
+            status = Status.LIVE;
+        } else {
+            status = Status.FIGHTING;
+            new java.util.Timer().schedule(new TimerTask() {
+                @Override
+                public void run() { //500毫秒后变为死亡状态
+                    status = Status.DEAD;
                 }
-            }
-        return CheckStatus.NORMAL;
+            }, 500);
+        }
     }
 
-    *//* 新位置上是否会和指定Creature相撞 *//*
-    public boolean isCollidesWith(Creature ct, int offsetX, int offsetY){
-        return this.x()+this.getWidth()>ct.x() && ct.x()+ct.getWidth()>this.x()
-                && this.y()+10>ct.y() && ct.y()+10>this.y();
-    }*/
 
-
-
-    protected enum CheckStatus{
-        NORMAL, FRIEND, ENEMY
-    }
     protected void fight(){
-
+        System.out.println(this.name + "战斗中");
     }
+
     protected void dead(){
 
     }
 
 
-
-
-    /*synchronized来起到同步加锁*/
-    public synchronized void isConfilct(int offsetx, int offsety){
-
+    public synchronized void checkForward(){
+        boolean flag = this.isGoodCreature;
+        for(Creature ct : battleField.getAllCreature())
+            if(ct!=this && ct.getStatus()==Status.LIVE && this.distanceTo(ct) < 3) {
+                if(flag == (ct.isGoodCreature)) {
+                    this.move(); //进行移动 并避免相撞
+                } else {
+                    boolean alive = new Random().nextBoolean();
+                    ct.setFight(alive);
+                    this.setFight(!alive);
+                }
+            }
     }
 
 
@@ -197,12 +197,16 @@ public abstract class Creature implements Comparable, Runnable {
     /**
      * 枚举类
      */
-    enum Status {
+    public enum Status {
         LIVE, FIGHTING, DEAD
     }
 
     enum Direction {
         LEFT, RIGHT, UP, DOWN
+    }
+
+    protected enum CheckStatus{
+        NORMAL, FRIEND, ENEMY
     }
 
 

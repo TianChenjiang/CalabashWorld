@@ -100,6 +100,14 @@ public class BattleField {
         }
     }
 
+    public ArrayList<Creature> getAllCreature(){
+        ArrayList<Creature> list = this.getGoodCreature();
+        for (Creature c : this.getBadCreatrue()){
+            list.add(c);
+        }
+        return list;
+    }
+
 
     public ArrayList<Creature> getGoodCreature() {
         return goodCreature;
